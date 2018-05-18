@@ -31,9 +31,6 @@ public class RemoteActivity extends AppCompatActivity {
 
         ipTxt.setText("IP:" + ipNumber);
         portTxt.setText("Port:" + portNumber);
-        //int PortInt = Integer.parseInt(portNumber);
-
-
 
         upBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +39,6 @@ public class RemoteActivity extends AppCompatActivity {
                 TcpClient mTcpClient = new TcpClient(ipNumber,portNumber,"fd+");
                 mTcpClient.execute();
             }
-
 
         });
         leftBtn.setOnClickListener(new View.OnClickListener() {
